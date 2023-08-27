@@ -35,7 +35,7 @@ class ProjectSeeder extends Seeder
         ];
 
         
-        for ($i=0; $i < 50; $i++) {
+        for ($i=0; $i < 200; $i++) {
             $newProject = new Project();
             $newProject->title = $faker->unique()->sentence(3);
             $newProject->description = $faker->paragraph(7);
