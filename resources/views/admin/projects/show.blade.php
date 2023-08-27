@@ -4,8 +4,10 @@
 <div class="col-7 m-auto mt-5">
     <div class="card text-center">
         <div class="card-header">
-            #{{$project->id}} - {{$project->title}}
+            #{{$project->id}} - {{$project->title}} 
         </div>
+
+        <!-- @dump($project->category()); -->
         <div class="card-body">
             <h5 class="card-title">
                 {{$project->title}}
