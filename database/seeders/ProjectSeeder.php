@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Type;
 use App\Models\Project;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -34,9 +35,11 @@ class ProjectSeeder extends Seeder
             "Javascript",
         ];
 
+        $type = Type::all();
         
         for ($i=0; $i < 200; $i++) {
             $newProject = new Project();
+            $newProject->type_id = $faker->randomElement($type)->id;
             $newProject->title = $faker->unique()->sentence(3);
             $newProject->description = $faker->paragraph(7);
             $newProject->type = $faker->randomElement($typeList);
