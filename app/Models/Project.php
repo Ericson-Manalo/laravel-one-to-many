@@ -18,10 +18,11 @@ class Project extends Model
         'type',
         'language',
         'created_date',
-        'image'
+        'image',
+        'type_id'
     ];
 
-    public function type(){
+    public function category(){
         return $this->belongsTo(Type::class);
     }
 }
