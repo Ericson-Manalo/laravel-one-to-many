@@ -16,6 +16,7 @@ class ProjectController extends Controller
     public function index()
     {
         //
+
         $projects = Project::paginate(10);
         // dd($projects);
         return view('admin.projects.index', compact('projects'));
@@ -27,6 +28,7 @@ class ProjectController extends Controller
     public function create()
     {
         //
+
         return view('admin.projects.create');
     }
 
@@ -44,6 +46,7 @@ class ProjectController extends Controller
             'language' => ['required'],
             'created_date' => ['required'],
             'image' => ['image'],
+            'type_id' => ['required'],
         ]);
 
         $img_path = Storage::put('uploads', $request['image']);
@@ -79,7 +82,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit', compact('project'));
+        $types = Type::all();
+        return view('admin.projects.edit', compact('project', 'types'));
     }
 
     /**
@@ -94,6 +98,7 @@ class ProjectController extends Controller
             'type' => ['required'],
             'language' => ['required'],
             'created_date' => ['required'],
+            'type_id' => ['required'],
         ]);
         $project->update($data);
         return redirect()->route('admin.projects.index', compact('project'));
