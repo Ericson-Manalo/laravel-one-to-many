@@ -42,7 +42,7 @@ class ProjectSeeder extends Seeder
             $newProject->type_id = $faker->randomElement($type)->id;
             $newProject->title = $faker->unique()->sentence(3);
             $newProject->description = $faker->paragraph(7);
-            $newProject->type = $faker->randomElement($typeList);
+            $newProject->category = $faker->randomElement($typeList);
             $newProject->language = $faker->randomElement($languageList);
             $newProject->created_date = $faker->date('Y_m_d');
             $newProject->save();

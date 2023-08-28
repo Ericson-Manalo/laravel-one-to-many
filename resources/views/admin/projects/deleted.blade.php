@@ -28,7 +28,7 @@
                     {{$project->description}}
                 </td>
                 <td>
-                    {{$project->type}}
+                    {{$project->category}}
                 </td>
                 <td>
                     {{$project->language}}

@@ -13,12 +13,12 @@ class TypeSeeder extends Seeder
      */
     public function run(): void
     {
-        $categories = ['backend', 'frontend', 'design', 'web', 'server', 'mobile'];
+        $types = ['backend', 'frontend', 'design', 'web', 'server', 'mobile'];
 
-        foreach ($categories as $category){
-            $type = new Type();
-            $type->name = $category;
-            $type->save();
+        foreach ($types as $type){
+            $newType = new Type();
+            $newType->name = $type;
+            $newType->save();
         }
     }
 }

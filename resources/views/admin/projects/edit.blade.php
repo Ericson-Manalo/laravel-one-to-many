@@ -27,11 +27,11 @@
         <input type="text" class="form-control" id="type" name="type">
     </div> -->
     <div class="form-group">
-        <label for="type" class="form-label">Type</label>
+        <label for="category" class="form-label">Type</label>
             <div class="col-md-10 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-file-code-o"></i></span>
-                    <select class="form-control" id="type" name="type" >
+                    <select class="form-control" id="category" name="category" >
                         <option>Public</option>
                         <option>Private</option>
                         <option>Sources</option>
