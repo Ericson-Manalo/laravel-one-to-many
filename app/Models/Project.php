@@ -14,15 +14,15 @@ class Project extends Model
 
     protected $fillable = [
         'title',
+        'type_id',
         'description',
         'type',
         'language',
         'created_date',
         'image',
-        'type_id'
     ];
 
-    public function category(){
+    public function type(){
         return $this->belongsTo(Type::class);
     }
 }
